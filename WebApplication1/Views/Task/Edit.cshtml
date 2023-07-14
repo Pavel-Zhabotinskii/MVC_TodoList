@@ -1,0 +1,20 @@
+﻿@model TodoList
+
+<h2>Редактировать задачу</h2>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+        <label asp-for="Title" class="control-label">Заголовок:</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsCompleted" class="control-label">Выполнено:</label>
+        <input asp-for="IsCompleted" class="form-control" />
+        <span asp-validation-for="IsCompleted" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Сохранить" class="btn btn-primary" />
+    </div>
+</form>

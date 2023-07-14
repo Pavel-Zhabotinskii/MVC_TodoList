@@ -1,0 +1,13 @@
+﻿@model TodoList
+
+<h2>Удалить задачу</h2>
+
+<h3>Вы уверены, что хотите удалить задачу с заголовком "@Model.Title"?</h3>
+
+<form asp-action="Delete">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        <a asp-action="Index">Отмена</a>
+    </div>
+</form>
